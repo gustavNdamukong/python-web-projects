@@ -1,0 +1,21 @@
+<!--extend the layout file-->
+{% extends "inventory/layout.html" %}
+
+{% block title %} Product Form {% endblock %}
+
+{% block content %} 
+    <h1 class="text-center">Product Form</h1>
+
+    <form class="jumbotron" method="post">
+        {% csrf_token %}
+        {{ form }}
+
+        <button
+            type="submit" 
+            class="btn btn-success btn-block"
+            role="button">
+            Save Product
+    </button>
+    </form>
+
+{% endblock %}

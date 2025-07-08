@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HOME</title>
+        <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    </head>
+    <body>
+        <h1>Gjango Forms</h1>
+        {% comment %} Your comment here {% endcomment %} 
+        <div class="centered-content">
+            <img class="logo" src="{% static 'images/dlogo.jpg' %}" alt="Django Logo">
+            
+            <form action="{% url 'contact' %}" method="get">
+                <button type="submit" class="btn">Click to enter form</button>
+            </form>
+        </div>
+        
+        <script src="{% static 'js/script.js' %}" width=></script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+{% load static %}
+	<!DOCTYPE html>
+	<html lang="en">
+    		<head>
+        		<title>Contact us</title>
+        		<link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    		</head>
+    		<body>
+        		<h1>Contact</h1>
+
+                <form action="{% url 'contact' %}" method="POST">
+                    {% csrf_token %}
+
+                    {% comment %} 
+                        Note there is a 'form' variable available in this file passed in 
+                        as the context from the router's (views.py) contact_view()
+                        method.
+
+                        So, here below calling '.as_p' on the form means we want each 
+                        form field to be rendered within <p> tags, for good formatting.
+                        It's a template function provided by Django for that purpose.
+                        'form.as_p' below means  
+                        
+                    {% endcomment %}
+                    {{ form.as_p }} 
+                    <button type="submit">Submit</button>
+                </form>
+        
+        		<script src="{% static 'js/script.js' %}" width=></script>
+    		</body>
+	</html>

@@ -1,0 +1,17 @@
+{% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
+            <head>
+                <title>Success page</title>
+                <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+            </head>
+            <body>
+                <h1>Success</h1>
+                <div class="success-message">
+                    <p>Your contact message has been successfully sent</p>
+                    <a href="{% url 'home' %}">Back to Home page</a>
+                </div>
+        
+                <script src="{% static 'js/script.js' %}" width=></script>
+            </body>
+    </html>
